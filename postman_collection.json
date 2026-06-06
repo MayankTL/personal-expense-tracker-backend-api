@@ -1,0 +1,139 @@
+{
+  "info": {
+    "name": "Expense Tracker Backend",
+    "description": "Postman collection for Expense Tracker Backend API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Add Expense",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 500,\n  \"category\": \"Food\",\n  \"date\": \"2026-06-06\",\n  \"description\": \"Lunch\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/expenses",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Expenses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/expenses",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "expenses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Expense",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 700\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/expenses/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "expenses",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Expense",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/expenses/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "expenses",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filter Expenses by Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/expenses/category/Food",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "expenses",
+            "category",
+            "Food"
+          ]
+        }
+      }
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "exec": [],
+        "type": "text/javascript"
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "exec": [],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    }
+  ]
+}
