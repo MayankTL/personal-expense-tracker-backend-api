@@ -27,6 +27,28 @@ A REST API for managing personal expenses using Node.js, Express, and MongoDB.
 - Delete an expense
 - Filter expenses by category
 
+## Screenshots
+
+### Add Expense
+
+![Add Expense](images/AddExpense.png)
+
+### Get All Expenses
+
+![Get All Expenses](images/GetAllExpense.png)
+
+### Update Expense
+
+![Update Expense](images/UpdateExpense.png)
+
+### Delete Expense
+
+![Delete Expense](images/DeleteExpense.png)
+
+### Filter Expenses by Category
+
+![Filter Expenses by Category](images/FilterExpensesbyCategory.png)
+
 ## Technologies
 
 - Node.js
